@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QoE VoLTE Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>QoE-Driven Optimization of VoLTE Communication</h1>
+
+    <!-- Form to Input QoE Data -->
+    <form id="qoeForm">
+        <label>Latency (ms): <input type="number" id="latencyInput" required></label>
+        <label>Jitter (ms): <input type="number" id="jitterInput" required></label>
+        <label>Packet Loss (%): <input type="number" id="packetLossInput" required></label>
+        <label>MOS: <input type="number" step="0.1" id="mosInput" required></label>
+        <button type="submit">Submit Data</button>
+    </form>
+
+    <!-- Display QoE Metrics -->
+    <div id="qoeMetrics">
+        <h2>Latest QoE Metrics</h2>
+        <p>Latency: <span id="latency">0</span> ms</p>
+        <p>Jitter: <span id="jitter">0</span> ms</p>
+        <p>Packet Loss: <span id="packetLoss">0</span> %</p>
+        <p>MOS: <span id="mos">0</span></p>
+    </div>
+
+    <!-- Chart Container -->
+    <canvas id="qoeChart"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
